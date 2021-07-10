@@ -15,8 +15,8 @@ export default {
     path: String,
     activeColor: {
       type: String,
-      default: "aqua",
-    },
+      default: "#ff5777"
+    }
   },
   // data() {
   //   return {
@@ -29,13 +29,13 @@ export default {
     },
     activeStyle() {
       return this.isActive ? { color: this.activeColor } : {};
-    },
+    }
   },
   methods: {
     itemClick() {
       this.$router.replace(this.path).catch(() => {});
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -47,6 +47,8 @@ export default {
   font-size: 14px;
 }
 .tab-bar-item img {
+  width: 24px;
+  height: 24px;
   margin-top: 4px;
   vertical-align: middle;
 }
